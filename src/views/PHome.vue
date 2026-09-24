@@ -8,6 +8,7 @@
     </template>
    </CButton>
    <CButton variant="secondary" size="xl"/>
+      <CButton variant="secondary" size="xl"/>
 </template>
 <script setup lang="ts">
 import CButton from '@/components/forms/CButton.vue';
