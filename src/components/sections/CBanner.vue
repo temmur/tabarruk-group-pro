@@ -1,6 +1,6 @@
 <template>
   <div
-    class="min-h-screen bg-no-repeat bg-cover bg-center relative"
+    class="min-h-screen bg-no-repeat bg-cover bg-center relative overflow-hidden"
     :style="{ backgroundImage: `url(${currentBanner.image})` }"
   >
     <div class="bg-[#070A1C]/40 z-2 absolute w-screen h-screen"></div>
