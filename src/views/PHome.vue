@@ -1,6 +1,8 @@
 <template>
- Home page
+<div>
+    <CBanner/>
+</div>
 </template>
 <script setup lang="ts">
-import CSearch from '@/components/forms/CSearch.vue';
+import CBanner from '@/components/sections/CBanner.vue';
 </script>

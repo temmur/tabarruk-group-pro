@@ -24,7 +24,7 @@
 import {ref, reactive} from 'vue'
 import CLanguageSwitcher from '../ui/CLanguageSwitcher.vue';
 import CSearch from '../forms/CSearch.vue';
-let inputShow = ref(true)
+let inputShow = ref(false)
 const navList = reactive([
     {
         name: 'О нас',

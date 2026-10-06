@@ -1,5 +1,5 @@
 <template>
-    <button class="flex items-center gap-2" :class="[variants[variant], sizes[size]]">
+    <button class="flex items-center gap-2 cursor-pointer" :class="[variants[variant], sizes[size]]">
         <slot name="prefix"></slot>
         {{ text }}
         <slot name="suffix"></slot>
@@ -32,6 +32,6 @@ const variants = {
 const sizes = {
     md: 'px-2 py-2',
     lg: 'px-4 py-2',
-    xl: 'px-6 py-3'
+    xl: 'px-10 py-4 rounded-md'
 }
 </script>
