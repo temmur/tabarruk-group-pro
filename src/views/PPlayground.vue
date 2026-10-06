@@ -1,3 +1,3 @@
 <template>
-    Play ground page
+    Play ground page.
 </template>
