@@ -1,14 +1,22 @@
 <template>
-    <button class="flex items-center gap-2" :class="[variants[variant], sizes[size]]">
-        <slot name="prefix"></slot>
-        {{ text }}
-        <slot name="suffix"></slot>
-    </button>
-</template>
-<script setup lang="ts">
-import {defineProps}from 'vue'
+  <button
+    class="flex items-center gap-2"
+    :class="[variants[variant], sizes[size]]"
+    :disabled="disabled"
+    type="button"
+  >
+    <slot name="prefix"></slot>
 
-const props = withDefaults(
+    {{ text }}
+
+    <slot name="suffix"></slot>
+  </button>
+</template>
+
+<script setup lang="ts">
+import { defineProps } from 'vue'
+
+withDefaults(
   defineProps<{
     text?: string
     variant?: 'primary' | 'secondary'
@@ -23,15 +31,14 @@ const props = withDefaults(
   }
 )
 
-
-
 const variants = {
-    primary: 'bg-black text-white',
-    secondary: 'bg-red-500'
+  primary: 'bg-black text-white',
+  secondary: 'bg-red-500'
 }
+
 const sizes = {
-    md: 'px-2 py-2',
-    lg: 'px-4 py-2',
-    xl: 'px-6 py-3'
+  md: 'px-2 py-2',
+  lg: 'px-4 py-2',
+  xl: 'px-6 py-3'
 }
 </script>
