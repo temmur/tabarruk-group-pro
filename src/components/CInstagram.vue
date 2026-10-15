@@ -3,7 +3,6 @@
   <section class="w-full bg-[#08091b] px-5 py-8 text-white">
     <div class="mx-auto max-w-[1120px]">
 
-      <!-- Sarlavha -->
       <div class="mb-7 text-center">
         <h2
           class="text-[40px] font-bold decoration-red-500 underline decoration-1 underline-offset-[8px]"
@@ -20,14 +19,12 @@
         </p>
       </div>
 
-      <!-- Rasmlar -->
       <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
         <div
           v-for="(item, index) in posts"
           :key="index"
           class="group relative cursor-pointer overflow-hidden rounded-md border min-h-[220px] border-white/15 bg-[#17182a] p-2 transition-colors duration-300 hover:border-white/30"
         >
-          <!-- Rasm va hover effekti -->
           <div class="relative h-[150px] w-full overflow-hidden rounded">
             <img
               v-if="item.image"
@@ -36,7 +33,6 @@
               class="h-full w-full object-cover transition-all duration-300 group-hover:scale-105 group-hover:brightness-50 "
             />
 
-            <!-- Rasm topilmasa -->
             <div
               v-else
               class="flex h-full w-full items-center justify-center bg-[#222438] text-xs text-gray-500"
@@ -44,7 +40,6 @@
               Rasm {{ index + 1 }}
             </div>
 
-            <!-- Hover qoramtir qatlam -->
             <div
               class="absolute inset-0 flex flex-col items-center justify-center bg-black/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
             >
@@ -55,7 +50,6 @@
             </div>
           </div>
 
-          <!-- Rasm tashqarisidagi matn -->
           <div class="px-1 pb-3 pt-2">
             <h3 class="text-[10px] font-semibold leading-3 text-white">
               {{ item.title }}
