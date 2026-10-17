@@ -11,7 +11,7 @@
       class="absolute z-20"
     />
 
-    <div class="container relative">
+    <div class="container relative -top-20">
       <div class="h-screen flex flex-col items-center justify-center relative z-6!">
         <p class="flex items-center gap-2 text-xl">
           <i class="icon-map-pin"></i>
@@ -55,6 +55,22 @@
         </span>
       </div>
     </div>
+    <div  class="absolute bottom-12 z-30">
+     <Carousel v-bind="carouselConfig">
+      <Slide v-for="slide in cards" 
+      :key="slide.id"
+      class="slider"
+      >
+         <CBannerCard
+        :item="slide"
+      />  
+      </Slide>
+      <!-- <template #addons>
+        <Navigation/>
+        <Pagination/>
+      </template> -->
+    </Carousel>
+    </div>
   </div>
 </template>
 
@@ -65,7 +81,26 @@ import {
   onMounted,
   onBeforeUnmount
 } from 'vue'
+import 'vue3-carousel/carousel.css'
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
+const carouselConfig = {
+  itemsToShow: 1.2,
+  wrapAround: true,
+  autoplay: 3000,
+  transition: 500,
+  snapAlign: 'start',
+  breakpoints: {
+    640: {
+      itemsToShow: 2.2,
+    },
+    1024: {
+      itemsToShow: 3.5,
+    },
+  },
+}
+
+import CBannerCard from '../cards/CBannerCard.vue'
 import CButton from '../forms/CButton.vue'
 
 const currentStep = ref(0)
@@ -99,6 +134,70 @@ const bannerMosques = ref([
       'https://admin.tabarrukziyorat.uz/media/destination_images/3_zL7Uu07.jpg'
   }
 ])
+
+
+const cards = [
+  {
+    id: 1,
+    location: 'Zhambyl region, Kazakhstan',
+    title: 'Ancient Taraz',
+    image: 'https://admin.tabarrukziyorat.uz/media/destination_images/%D0%A0%D0%B8%D1%81%D1%83%D0%BD%D0%BE%D0%BA3_W24FO57.jpg'
+  },
+  {
+    id: 2,
+    location: 'Kazakhstan',
+    title: 'Auliye-bastau',
+    image: 'https://admin.tabarrukziyorat.uz/media/destination_images/Screenshot_20190819-152258_Google.jpg'
+  },
+  {
+    id: 3,
+    location: 'Uzbekistan',
+    title: 'Ahtamsohob',
+    image: 'https://admin.tabarrukziyorat.uz/media/destination_images/e72a32a4e5fa6016ced565677acfc453.jpg'
+  },
+  {
+    id: 4,
+    location: 'Turkmenistan',
+    title: 'Abiwerd',
+    image: 'https://admin.tabarrukziyorat.uz/media/destination_images/Axtam_Sahoba_Adhamsahoba.jpg '
+  },
+  {
+    id: 5,
+    location: 'Kazakhstan',
+    title: 'Balasagun',
+    image: 'https://admin.tabarrukziyorat.uz/media/destination_images/IMG_6383.jpg'
+  },
+  {
+    id: 6,
+    location:'turkiston viloyati,qozoq shaharchasi',
+    title:"o'tar shahar",
+    image:'https://invest-in-uzbekistan.org/wp-content/uploads/The-minaret-and-the-fortress-of-Bukhara-14-1200x800_c.jpg' 
+  },
+    {
+    id: 7,
+    location:'qadimgi taraz shaharchasi',
+    title:'Balasaguooan',
+    image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiONmZY9nM7rlct2bUIHId0PkpQtkWRQLrsv1mYThaUw&s'
+  },
+    {
+    id: 8,
+    location:'Kazakhstan',
+    title:'Balasagun',
+    image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfmPQCs-T7_WLyVsPh6rlX04iPBBGCBgGx9O8FqzCkVg&s=10' 
+  },
+    {
+    id: 9,
+    location:'Kazakhstan',
+    title:'Balasagun',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUs1CTva8dc6RXoBrytpEXcZ-07ngg6CgVYD196Ym7Vw&s=10'
+  },
+    {
+    id: 10,
+    location:'Kazakhstan',
+    title:'Balasagun',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzdOmVYbwqcfZ1xymlg5EgE8Vx-FYLfyCb2yZ-3cqI4A&s=10'
+  }
+  ]
 
 const currentBanner = computed(() => {
   return bannerMosques.value[currentStep.value]
