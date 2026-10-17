@@ -1,3 +1,10 @@
 <template>
-  <router-view></router-view>
+  <RouterView />
+
 </template>
+<style>
+
+</style>
+<script>
+
+</script>
