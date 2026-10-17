@@ -26,14 +26,14 @@
           {{ currentBanner?.description }}
         </p>
 
-        <CButton variant="secondary" size="xl" class="mt-6">
+        <CButton variant="secondary" size="xl" class="mt-6"  style="background-color: red;  padding: 23px 15px; font-size: 20px;">
           <template #suffix>
             <i class="icon-arrow-right"></i>
           </template>
         </CButton>
       </div>
 
-      <!-- RIGHT PROGRESS -->
+   
       <div
         class="absolute right-6 top-1/2 z-20 flex -translate-y-1/2 flex-col items-center gap-3 text-white"
       >
