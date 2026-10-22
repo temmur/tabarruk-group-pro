@@ -5,6 +5,12 @@
     "map": "Umumiy xarita",
     "religions": "Dinlar",
     "help": "Yordam",
-    "faq": "FAQ"
+    "faq": "Ko‘p so‘raladigan savollar"
+  },
+  "news": {
+    "title": "Yangiliklar",
+    "subtitle": "Turkiy davlatlar haqidagi so‘nggi yangiliklar",
+    "all": "Barcha yangiliklar",
+    "empty": "Hozircha yangiliklar mavjud emas."
   }
 }
