@@ -84,6 +84,9 @@ import {
 import 'vue3-carousel/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
+import CBannerCard from '../cards/CBannerCard.vue'
+import CButton from '../forms/CButton.vue'
+
 const carouselConfig = {
   itemsToShow: 1.2,
   wrapAround: true,
@@ -100,8 +103,7 @@ const carouselConfig = {
   },
 }
 
-import CBannerCard from '../cards/CBannerCard.vue'
-import CButton from '../forms/CButton.vue'
+
 
 const currentStep = ref(0)
 
