@@ -3,12 +3,16 @@
   <section class="news-section w-full px-4 py-8 sm:px-6">
     <div class="mx-auto max-w-5xl">
       <div class="relative mb-5 text-center">
-        <div class="absolute left-[18%] top-3 h-px w-8 bg-slate-700 sm:left-[20%] sm:w-12"></div>
-        <div class="absolute right-[18%] top-3 h-px w-8 bg-slate-700 sm:right-[20%] sm:w-12"></div>
+        <div
+          class="absolute left-[18%] top-3 h-px w-8 bg-slate-700 sm:left-[20%] sm:w-12"
+        ></div>
+        <div
+          class="absolute right-[18%] top-3 h-px w-8 bg-slate-700 sm:right-[20%] sm:w-12"
+        ></div>
 
         <h2
           class="font-sans text-[35px] font-bold sm:text-3xl"
-          style="font-family: 'Playfair Display', serif;"
+          style="font-family: 'Playfair Display', serif"
         >
           <span class="underline decoration-red-500 decoration-1 underline-offset-9">
             {{ t('news.title') }}
@@ -24,14 +28,16 @@
         v-if="news.length"
         class="grid grid-cols-1 items-stretch gap-2 md:grid-cols-[1.35fr_1fr]"
       >
+        <!-- Birinchi yangilik -->
         <RouterLink
           v-if="news[0]"
-          :to="getRoute(news[0].router, news[0].id)"
+          :to="getRoute(news[0])"
           class="group flex min-w-0 gap-3 rounded-md border border-white/10 bg-[#0c1021] p-3 transition hover:border-slate-600 sm:p-4"
         >
-          <div class="h-[200px] w-[42%] shrink-0 overflow-hidden rounded-sm bg-[#080b19] sm:h-[240px]">
+          <div
+            class="h-[200px] w-[42%] shrink-0 overflow-hidden rounded-sm bg-[#080b19] sm:h-[240px]"
+          >
             <img
-              v-if="news[0].image"
               :src="news[0].image"
               :alt="news[0].title"
               class="h-full w-full object-cover transition duration-300 group-hover:scale-105"
@@ -56,24 +62,24 @@
           </div>
         </RouterLink>
 
+        <!-- Ikkinchi va uchinchi yangiliklar -->
         <div class="flex min-w-0 flex-col gap-2">
           <RouterLink
             v-for="item in news.slice(1, 3)"
             :key="item.id"
-            :to="getRoute(item.router, item.id)"
+            :to="getRoute(item)"
             class="group flex min-h-[90px] min-w-0 flex-1 gap-2 rounded-md border border-white/10 bg-[#0c1021] p-2 transition hover:border-slate-600 sm:min-h-[100px]"
           >
             <div
-              class="w-[35%] shrink-0 overflow-hidden rounded-sm bg-[#080b19] sm:h-[84px]"
-              style="height: 110px;"
+              class="h-[110px] w-[35%] shrink-0 overflow-hidden rounded-sm bg-[#080b19] sm:h-[110px]"
             >
               <img
-                v-if="item.image"
                 :src="item.image"
                 :alt="item.title"
                 class="h-full w-full object-cover transition duration-300 group-hover:scale-105"
               />
             </div>
+
             <div class="flex min-w-0 flex-1 flex-col">
               <h3 class="text-[11px] font-semibold leading-snug text-white sm:text-[13px]">
                 {{ item.title }}
@@ -133,11 +139,7 @@ function formatDate(date: number | string): string {
   }).format(parsedDate)
 }
 
-function getRoute(route: News['router'], id: number): string {
-  if (typeof route === 'string' && route.startsWith('/')) {
-    return route
-  }
-
-  return `/news/${id}`
+function getRoute(item: News): string {
+  return item.router || `/news/${item.id}`
 }
 </script>

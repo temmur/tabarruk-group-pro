@@ -1,3 +1,4 @@
+
 import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
@@ -10,46 +11,47 @@ const routes = [
       {
         path: '',
         name: 'home',
-        component: () => import('@/views/PHome.vue')
+        component: () => import('@/views/PHome.vue'),
       },
-
       {
         path: 'dinlar',
         name: 'dinlar',
-        component: () => import('@/views/PDinlar.vue')
+        component: () => import('@/views/PDinlar.vue'),
       },
-
-     {
-  path: 'umumiy-xarita',
-  name: 'umumiy-xarita',
-  component: () => import('@/views/PUmumiyxarita.vue')
-},
-
+      {
+        path: 'umumiy-xarita',
+        name: 'umumiy-xarita',
+        component: () => import('@/views/PUmumiyxarita.vue'),
+      },
       {
         path: 'yordam',
         name: 'yordam',
-        component: () => import('@/views/PYordam.vue')
+        component: () => import('@/views/PYordam.vue'),
       },
-
       {
         path: 'faq',
         name: 'faq',
-        component: () => import('@/views/PFaq.vue')
+        component: () => import('@/views/PFaq.vue'),
       },
-
       {
         path: 'playground',
         name: 'playground',
         component: () => import('@/views/PPlayground.vue'),
-        alias: ['spark', 'tracker']
-      }
-    ]
-  }
+        alias: ['spark', 'tracker'],
+      },
+      {
+        path: 'news/:id',
+        name: 'news-single',
+        component: () => import("@/views/PSingle.vue")
+
+      },
+    ],
+  },
 ]
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes,
 })
 
 export default router
