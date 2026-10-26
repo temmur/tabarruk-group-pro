@@ -5,6 +5,12 @@
     "map": "General map",
     "religions": "Religions",
     "help": "Help",
-    "faq": "FAQ"
+    "faq": "Frequently asked questions"
+  },
+  "news": {
+    "title": "News",
+    "subtitle": "Latest news about Turkic states",
+    "all": "All news",
+    "empty": "No news available yet."
   }
 }

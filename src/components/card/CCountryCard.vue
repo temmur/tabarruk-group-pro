@@ -1,5 +1,5 @@
 <template>
-  <RouterLink :to="router" class="country-card">
+  <RouterLink :to="`country/${router}`" class="country-card">
     <div class="flag-container">
       <img :src="flag" :alt="`${title} flag`" loading="lazy" />
     </div>

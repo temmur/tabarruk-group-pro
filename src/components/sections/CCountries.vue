@@ -16,7 +16,7 @@
           :flag="country.flag"
           :title="country.title"
           :destintaions="country.destintaions"
-          :router="country.router"
+          :router="String(country.id)"
         />
       </div>
 
@@ -27,7 +27,7 @@
           :flag="country.flag"
           :title="country.title"
           :destintaions="country.destintaions"
-          :router="country.router"
+          :router="String(country.id)"
         />
       </div>
     </div>
@@ -36,58 +36,8 @@
 
 <script setup lang="ts">
 import CCardCountrie from '../card/CCountryCard.vue'
+import { countries } from '@/data/countryData.ts'
 
-interface Country {
-  flag: string
-  title: string
-  destintaions: number
-  router: string
-}
-
-const countries: Country[] = [
-  {
-    flag: 'https://flagcdn.com/w160/uz.png',
-    title: "O'zbekiston",
-    destintaions: 175,
-    router: '/uzbekistan'
-  },
-  {
-    flag: 'https://flagcdn.com/w160/tr.png',
-    title: 'Turkiya',
-    destintaions: 150,
-    router: '/turkey'
-  },
-  {
-    flag: 'https://flagcdn.com/w160/tm.png',
-    title: 'Turkmaniston',
-    destintaions: 20,
-    router: '/turkmenistan'
-  },
-  {
-    flag: 'https://flagcdn.com/w160/az.png',
-    title: 'Ozarbayjon',
-    destintaions: 0,
-    router: '/azerbaijan'
-  },
-  {
-    flag: 'https://flagcdn.com/w160/kz.png',
-    title: "Qozog'iston",
-    destintaions: 51,
-    router: '/kazakhstan'
-  },
-  {
-    flag: 'https://flagcdn.com/w160/kg.png',
-    title: "Qirg'iziston",
-    destintaions: 19,
-    router: '/kyrgyzstan'
-  },
-  {
-    flag: 'https://flagcdn.com/w160/hu.png',
-    title: 'Vengriya',
-    destintaions: 14,
-    router: '/hungary'
-  }
-]
 </script>
 
 <style scoped>
