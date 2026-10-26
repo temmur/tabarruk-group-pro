@@ -1,3 +1,4 @@
+
 import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
@@ -14,16 +15,22 @@ const routes = [
       },
 
       {
+        path: 'biz-haqimizda',
+        name: 'biz-haqimizda',
+        component: () => import('@/views/PBizXaqimizda.vue')
+      },
+
+      {
         path: 'dinlar',
         name: 'dinlar',
         component: () => import('@/views/PDinlar.vue')
       },
 
-     {
-  path: 'umumiy-xarita',
-  name: 'umumiy-xarita',
-  component: () => import('@/views/PUmumiyxarita.vue')
-},
+      {
+        path: 'umumiy-xarita',
+        name: 'umumiy-xarita',
+        component: () => import('@/views/PUmumiyxarita.vue')
+      },
 
       {
         path: 'yordam',
@@ -42,14 +49,66 @@ const routes = [
         name: 'playground',
         component: () => import('@/views/PPlayground.vue'),
         alias: ['spark', 'tracker']
+      },
+
+      {
+        path: 'davlatlar',
+        name: 'davlatlar',
+        component: () => import('@/views/PDavlatlar.vue')
+      },
+
+      {
+        path: 'uzbekistan',
+        name: 'uzbekistan',
+        component: () => import('@/views/PDavlatlar.vue')
+      },
+
+      {
+        path: 'turkey',
+        name: 'turkey',
+        component: () => import('@/views/PDavlatlar.vue')
+      },
+
+      {
+        path: 'turkmenistan',
+        name: 'turkmenistan',
+        component: () => import('@/views/PDavlatlar.vue')
+      },
+
+      {
+        path: 'azerbaijan',
+        name: 'azerbaijan',
+        component: () => import('@/views/PDavlatlar.vue')
+      },
+
+      {
+        path: 'kazakhstan',
+        name: 'kazakhstan',
+        component: () => import('@/views/PDavlatlar.vue')
+      },
+
+      {
+        path: 'kyrgyzstan',
+        name: 'kyrgyzstan',
+        component: () => import('@/views/PDavlatlar.vue')
+      },
+
+      {
+        path: 'hungary',
+        name: 'hungary',
+        component: () => import('@/views/PDavlatlar.vue')
       }
     ]
   }
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
-  routes
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes,
+  scrollBehavior() {
+    return { top: 0 }
+  }
 })
 
 export default router
+  
