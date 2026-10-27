@@ -6,5 +6,9 @@
     "religions": "Dinlar",
     "help": "Yordam",
     "faq": "FAQ"
+  },
+  "partners": {
+    "title": "Hamkorlar",
+    "subtitle": "Ushbu veb-sayt turkiy mamlakatlarda joylashgan tarixiy, noyob joylar haqida ma'lumot almashish uchun yaratilgan."
   }
 }

@@ -6,5 +6,9 @@
     "religions": "Religions",
     "help": "Help",
     "faq": "FAQ"
+  },
+  "partners": {
+    "title": "Partners",
+    "subtitle": "This website was created to share information about unique historical sites located in Turkic countries."
   }
 }
