@@ -97,7 +97,7 @@ const carouselConfig = {
     640: {
       itemsToShow: 2.2,
     },
-    1024: {
+    1024:  {
       itemsToShow: 3.5,
     },
   },
