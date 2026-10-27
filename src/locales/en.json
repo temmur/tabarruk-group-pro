@@ -9,6 +9,13 @@
   },
   "partners": {
     "title": "Partners",
-    "subtitle": "This website was created to share information about unique historical sites located in Turkic countries."
+    "subtitle": "This website was created to share information about unique historical sites located in Turkic countries.",
+    "faq": "Frequently asked questions"
+  },
+  "news": {
+    "title": "News",
+    "subtitle": "Latest news about Turkic states",
+    "all": "All news",
+    "empty": "No news available yet."
   }
 }

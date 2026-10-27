@@ -9,6 +9,13 @@
   },
   "partners": {
     "title": "Hamkorlar",
-    "subtitle": "Ushbu veb-sayt turkiy mamlakatlarda joylashgan tarixiy, noyob joylar haqida ma'lumot almashish uchun yaratilgan."
+    "subtitle": "Ushbu veb-sayt turkiy mamlakatlarda joylashgan tarixiy, noyob joylar haqida ma'lumot almashish uchun yaratilgan.",
+    "faq": "Ko‘p so‘raladigan savollar"
+  },
+  "news": {
+    "title": "Yangiliklar",
+    "subtitle": "Turkiy davlatlar haqidagi so‘nggi yangiliklar",
+    "all": "Barcha yangiliklar",
+    "empty": "Hozircha yangiliklar mavjud emas."
   }
 }

@@ -1,77 +1,162 @@
-<template>
-  <div class="relative" data-countries-menu>
-    <!-- Davlatlar Button -->
-    <button
-      type="button"
-      class="cursor-pointer border-0 bg-transparent p-0 text-inherit [font:inherit] flex items-center gap-1"
-      :aria-expanded="isOpen"
-      aria-haspopup="true"
-      @click.stop="$emit('toggle')"
-    >
-      {{ title }}
-    </button>
-
-    <!-- Dropdown Menu -->
-    <div
-      v-if="isOpen"
-      class="absolute left-1/2 top-full z-50 mt-4 w-[320px] max-w-[calc(100vw-1rem)] -translate-x-1/2 rounded-xl border border-[#484B58] bg-[#202333]/95 p-3 shadow-2xl"
-      @click.stop
-    >
-      <div class="grid grid-cols-2 gap-2">
-        <router-link
-          v-for="country in countriesList"
-          :key="country.id"
-          :to="country.router"
-          class="flex flex-col rounded-lg p-2.5 text-white transition-colors hover:bg-white/5"
-          @click="$emit('close')"
-        >
-          <div class="flex items-center space-x-2">
-            <!-- Flag Image -->
-            <img 
-              :src="country.flag" 
-              :alt="country.name" 
-              class="w-6 h-6 rounded-full object-cover shrink-0" 
-            />
-            <span class="text-sm font-medium text-white truncate">{{ country.name }}</span>
-          </div>
-          <span class="text-xs text-[#A5A7B2] mt-1 pl-8">
-            {{ country.locationsCount }} Manzilgoh
-          </span>
-        </router-link>
-      </div>
-    </div>
-  </div>
-</template>
 
 <script setup lang="ts">
-import flag1 from '@/assets/flags-svg/(1).svg'
-import flag2 from '@/assets/flags-svg/(2).svg'
-import flag3 from '@/assets/flags-svg/(3).svg'
-import flag4 from '@/assets/flags-svg/(4).svg'
-import flag5 from '@/assets/flags-svg/(5).svg'
-import flag6 from '@/assets/flags-svg/(6).svg'
+import { computed } from 'vue'
+import { useRoute } from 'vue-router'
+import CCountryCard from '@/components/card/CCountryCard.vue'
 
-defineProps<{
-  title: string
-  isOpen: boolean
-}>()
+const route = useRoute()
 
-defineEmits(['toggle', 'close'])
+const isCountryPage = computed(() => {
+  return [
+    '/uzbekistan',
+    '/turkey',
+    '/turkmenistan',
+    '/azerbaijan',
+    '/kazakhstan',
+    '/kyrgyzstan',
+    '/hungary'
+  ].includes(route.path)
+})
 
-interface CountryItem {
-  id: number
-  name: string
-  flag: string
-  locationsCount: number
-  router: string
-}
-
-const countriesList: CountryItem[] = [
-  { id: 1, name: "O'zbekiston", flag: flag1, locationsCount: 150, router: "/uzbekistan" },
-  { id: 2, name: "Turkmaniston", flag: flag2, locationsCount: 0, router: "/turkmenistan" },
-  { id: 3, name: "Qozog'iston", flag: flag3, locationsCount: 0, router: "/kazakhstan" },
-  { id: 4, name: "Ozarbayjon", flag: flag4, locationsCount: 0, router: "/azerbaijan" },
-  { id: 5, name: "Qirg'iziston", flag: flag5, locationsCount: 0, router: "/kyrgyzstan" },
-  { id: 6, name: "Vengriya", flag: flag6, locationsCount: 0, router: "/hungary" },
+const countries = [
+  {
+    title: "O'zbekiston",
+    flag: '/images/fotos/uzbekistan.png',
+    destintaions: 175,
+    router: '/uzbekistan'
+  },
+  {
+    title: 'Turkiya',
+    flag: '/images/fotos/turkey.png',
+    destintaions: 150,
+    router: '/turkey'
+  },
+  {
+    title: 'Turkmaniston',
+    flag: '/images/fotos/turkmenistan.png',
+    destintaions: 20,
+    router: '/turkmenistan'
+  },
+  {
+    title: 'Ozarbayjon',
+    flag: '/images/fotos/azerbaijan.png',
+    destintaions: 0,
+    router: '/azerbaijan'
+  },
+  {
+    title: "Qozog'iston",
+    flag: '/images/fotos/kazakhstan.png',
+    destintaions: 51,
+    router: '/kazakhstan'
+  },
+  {
+    title: "Qirg'iziston",
+    flag: '/images/fotos/kyrgyzstan.png',
+    destintaions: 19,
+    router: '/kyrgyzstan'
+  },
+  {
+    title: 'Vengriya',
+    flag: '/images/fotos/hungary.png',
+    destintaions: 14,
+    router: '/hungary'
+  }
 ]
 </script>
+
+<template>
+  <main v-if="isCountryPage" class="empty-country-page"></main>
+
+  <main v-else class="countries-page">
+    <section class="countries-section">
+      <h1 class="section-title">
+        Nechta mamlakatlar?
+      </h1>
+
+      <p class="section-subtitle">
+        Mavjud bo'lgan barcha mamlakatlar
+      </p>
+
+      <div class="countries-grid">
+        <CCountryCard
+          v-for="country in countries"
+          :key="country.title"
+          :flag="country.flag"
+          :title="country.title"
+          :destintaions="country.destintaions"
+          :router="country.router"
+        />
+      </div>
+    </section>
+  </main>
+</template>
+
+<style scoped>
+.empty-country-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+.countries-page {
+  min-height: 100vh;
+  padding: 20px 24px 60px;
+  background: #08091b;
+  color: white;
+}
+
+.countries-section {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-title {
+  width: fit-content;
+  margin: 0 auto;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #ff4655;
+  font-family: Georgia, serif;
+  font-size: 38px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.section-subtitle {
+  margin: 12px 0 60px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.countries-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  justify-items: center;
+  gap: 60px 30px;
+}
+
+@media (max-width: 768px) {
+  .countries-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px 16px;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+
+  .section-subtitle {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 380px) {
+  .countries-page {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .countries-grid {
+    gap: 32px 8px;
+  }
+}
+</style>
