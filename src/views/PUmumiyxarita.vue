@@ -1,4 +1,4 @@
-```vue
+
 <template>
   <main class="container min-h-screen py-8">
     <h1 class="mb-6 text-3xl font-semibold">
@@ -23,4 +23,3 @@
 
 <script setup lang="ts">
 </script>
-```
