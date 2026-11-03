@@ -1,25 +1,43 @@
 
 <template>
   <main class="container min-h-screen py-8">
-    <h1 class="mb-6 text-3xl font-semibold">
+
+ 
+    <!-- Sarlavha -->
+    <h1 class="mb-6 text-3xl font-bold text-white">
       Umumiy Xarita
     </h1>
 
+    <!-- OQ XARITA JOYI -->
     <div
-      class="flex min-h-[500px] items-center justify-center rounded-2xl border border-gray-300 bg-gray-100 p-6 text-center"
+      class="min-h-[500px] w-full rounded-2xl
+             bg-white shadow-lg"
     >
-      <div>
-        <h2 class="mb-2 text-xl font-medium text-gray-800">
-          Umumiy Xarita
-        </h2>
+      <div
+        class="flex min-h-[500px] items-center
+               justify-center"
+      >
+        <div class="text-center">
+          <h2 class="mb-3 text-2xl font-bold text-gray-900">
+            Umumiy Xarita
+          </h2>
 
-        <p class="text-gray-600">
-          Xarita shu yerda joylashadi.
-        </p>
+          <p class="text-gray-600">
+            Xarita shu yerda joylashadi.
+          </p>
+        </div>
       </div>
     </div>
+
   </main>
 </template>
 
 <script setup lang="ts">
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+const goHome = () => {
+  router.push('/')
+}
 </script>
