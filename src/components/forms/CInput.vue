@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{
+defineProps<{ 
   modelValue?: string
   error?: boolean
   disabled?: boolean
