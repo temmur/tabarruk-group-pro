@@ -57,12 +57,12 @@ const variants = {
   justify-content: center;
   gap: 4px;
   height: 20px;
-  padding: 0;
+  padding: 30px 130px;
   border: none;
-  border-radius: 4px;
+  border-radius: 9px;
   color: #ffffff;
   font-family: Arial, sans-serif;
-  font-size: 7px;
+  font-size: 20px;
   font-weight: 600;
   white-space: nowrap;
   cursor: pointer;
