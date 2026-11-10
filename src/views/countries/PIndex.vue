@@ -1,15 +1,7 @@
-
 <template>
   <div v-if="activeCountry">
-    <h1>{{ activeCountry.title }}</h1>
-
-    <img
-      :src="activeCountry.flag"
-      :alt="activeCountry.title"
-      width="120"
-    />
-
-    <p>{{ activeCountry.destintaions }} Manzillar</p>
+    <CCountryBanner :country="activeCountry" />
+    
   </div>
 
   <div v-else>
@@ -21,6 +13,7 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { countries } from '@/data/countryData'
+import CCountryBanner from '@/components/sections/CCountryBanner.vue'
 
 const route = useRoute()
 

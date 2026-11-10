@@ -115,6 +115,7 @@ import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { news, type News } from '@/data/newsData'
 
+
 const route = useRoute()
 
 // URL manzilidagi ID bo‘yicha yangilikni topish
