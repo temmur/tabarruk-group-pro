@@ -49,7 +49,19 @@
   "turkmenistan": {
     "title": "Turkmaniston",
     "description": "Qadimiy tarix va madaniyatga ega Markaziy Osiyo davlati."
-  }
 }
+},
+  "forms": {
+    "have_question": "Bizga biror savoling bormi?",
+    "fill_blanks":"Quyidagi formani to‘ldiring, biz tez orada siz bilan bog‘lanamiz",
+    "fullName":"ism",
+    "email":"elektron pochta",
+    "message":"xabar",
+    "approve_with":"Ushbu xabarni yuborish orqali siz maxfiylik siyosati shartlariga rozilik bildirasiz.",
+    "address":"Manzil",
+    "phone_number":"telefon raqam",
+            "send_for":"yuborish"
+
+  }
 }
 

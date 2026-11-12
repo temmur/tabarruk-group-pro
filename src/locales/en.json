@@ -50,5 +50,18 @@
     "title": "Turkmenistan",
     "description": "A Central Asian country with ancient history and culture."
   }
+},
+  "forms": {
+    "have_question":"Do you have a question for us?",
+    "fill_blanks":"Fill out the formx below and we’ll get in touch with you soon",
+    "fullName":"name",
+    "email":"Email",
+    "message":"Message",
+    "approve_with":"By sending this message, you agree to the terms of the privacy policy.",
+    "address":"Address",
+    "phone_number": "Phone number",
+    "send_for":"send"
+     
+  } 
 }
-}
+
