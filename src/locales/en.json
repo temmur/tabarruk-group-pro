@@ -18,6 +18,39 @@
     "all": "All news",
     "empty": "No news available yet."
   },
+  "gallery": {
+  "title": "Photos",
+  "subtitle": "Stay informed about the latest news and developments in the Turkic world.",
+  "watchVideo": "Watch video",
+  "attractions": "Places of interest",
+  "population": "Population"
+},
+"countries": {
+  "uzbekistan": {
+    "title": "Uzbekistan",
+    "description": "A Central Asian country with ancient history and rich culture."
+  },
+  "turkey": {
+    "title": "Turkey",
+    "description": "A historical and cultural country connecting Europe and Asia."
+  },
+  "kazakhstan": {
+    "title": "Kazakhstan",
+    "description": "The largest country in Central Asia."
+  },
+  "azerbaijan": {
+    "title": "Azerbaijan",
+    "description": "A Caucasian country with a rich history and culture."
+  },
+  "kyrgyzstan": {
+    "title": "Kyrgyzstan",
+    "description": "A country famous for its beautiful mountains and lakes."
+  },
+  "turkmenistan": {
+    "title": "Turkmenistan",
+    "description": "A Central Asian country with ancient history and culture."
+  }
+},
   "forms": {
     "have_question":"Do you have a question for us?",
     "fill_blanks":"Fill out the formx below and we’ll get in touch with you soon",
@@ -31,3 +64,4 @@
      
   } 
 }
+

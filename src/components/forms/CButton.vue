@@ -2,28 +2,18 @@
 <template>
   <button
     class="custom-button"
-    :class="variants[variant]"
+    :class="[
+      `custom-button--${variant}`,
+      `custom-button--${size}`
+    ]"
     :disabled="disabled"
+    type="button"
   >
-    <slot name="prefix"></slot>
+    <slot name="prefix" />
 
     {{ text }}
 
-    <slot name="suffix">
-      <svg
-        v-if="variant === 'primary'"
-        width="10"
-        height="10"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="white"
-        stroke-width="2"
-      >
-        <circle cx="12" cy="12" r="10" />
-        <ellipse cx="12" cy="12" rx="4" ry="10" />
-        <path d="M2 12h20M4.5 6h15M4.5 18h15" />
-      </svg>
-    </slot>
+    <slot name="suffix" />
   </button>
 </template>
 
@@ -42,13 +32,7 @@ withDefaults(
     disabled: false
   }
 )
-
-const variants = {
-  primary: 'primary',
-  secondary: 'secondary'
-}
 </script>
-
 
 <style scoped>
 .custom-button {
@@ -69,19 +53,40 @@ const variants = {
   flex-shrink: 0;
 }
 
-.primary {
-  width: 53px;
+/* Variants */
+.custom-button--primary {
   background: #f04452;
 }
 
-.secondary {
-  width: 101px;
+.custom-button--secondary {
   background: #292d3e;
 }
 
+/* Sizes */
+.custom-button--md {
+  height: 20px;
+  min-width: 53px;
+  padding: 0 8px;
+  font-size: 7px;
+}
+
+.custom-button--lg {
+  height: 32px;
+  min-width: 80px;
+  padding: 0 12px;
+  font-size: 12px;
+}
+
+.custom-button--xl {
+  height: 40px;
+  min-width: 101px;
+  padding: 0 16px;
+  font-size: 14px;
+}
+
+/* Disabled */
 .custom-button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 </style>
-```

@@ -11,6 +11,7 @@
     "type-check": "vue-tsc --build"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.3.1",
     "@lucide/vue": "^1.66.0",
     "@tailwindcss/vite": "^4.3.3",
     "@vuelidate/core": "^2.0.3",

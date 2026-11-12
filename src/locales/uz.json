@@ -18,6 +18,39 @@
     "all": "Barcha yangiliklar",
     "empty": "Hozircha yangiliklar mavjud emas."
   },
+  "gallery": {
+  "title": "Fotosuratlar",
+  "subtitle": "Turk dunyosidagi so‘nggi yangiliklar va o‘zgarishlardan xabardor bo‘ling.",
+  "watchVideo": "Videoni tomosha qilish",
+  "attractions": "Diqqatga sazovor joylar",
+  "population": "Aholi soni"
+},
+"countries": {
+  "uzbekistan": {
+    "title": "O‘zbekiston",
+    "description": "Markaziy Osiyoning qadimiy tarixi va boy madaniyatiga ega davlati."
+  },
+  "turkey": {
+    "title": "Turkiya",
+    "description": "Yevropa va Osiyoni bog‘lovchi tarixiy va madaniy mamlakat."
+  },
+  "kazakhstan": {
+    "title": "Qozog‘iston",
+    "description": "Markaziy Osiyodagi eng katta davlat."
+  },
+  "azerbaijan": {
+    "title": "Ozarbayjon",
+    "description": "Boy tarixi va madaniyatiga ega Kavkaz davlati."
+  },
+  "kyrgyzstan": {
+    "title": "Qirg‘iziston",
+    "description": "Go‘zal tog‘lari va ko‘llari bilan mashhur mamlakat."
+  },
+  "turkmenistan": {
+    "title": "Turkmaniston",
+    "description": "Qadimiy tarix va madaniyatga ega Markaziy Osiyo davlati."
+}
+},
   "forms": {
     "have_question": "Bizga biror savoling bormi?",
     "fill_blanks":"Quyidagi formani to‘ldiring, biz tez orada siz bilan bog‘lanamiz",
@@ -31,3 +64,4 @@
 
   }
 }
+
