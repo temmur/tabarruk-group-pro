@@ -16,7 +16,7 @@
           :flag="country.flag"
           :title="country.title"
           :destintaions="country.destintaions"
-          :router="String(country.id)"
+          :router="`country/${String(country.id)}`"
         />
       </div>
 

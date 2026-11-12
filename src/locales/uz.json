@@ -5,6 +5,11 @@
     "map": "Umumiy xarita",
     "religions": "Dinlar",
     "help": "Yordam",
+    "faq": "FAQ"
+  },
+  "partners": {
+    "title": "Hamkorlar",
+    "subtitle": "Ushbu veb-sayt turkiy mamlakatlarda joylashgan tarixiy, noyob joylar haqida ma'lumot almashish uchun yaratilgan.",
     "faq": "Ko‘p so‘raladigan savollar"
   },
   "news": {
@@ -12,5 +17,51 @@
     "subtitle": "Turkiy davlatlar haqidagi so‘nggi yangiliklar",
     "all": "Barcha yangiliklar",
     "empty": "Hozircha yangiliklar mavjud emas."
+  },
+  "gallery": {
+  "title": "Fotosuratlar",
+  "subtitle": "Turk dunyosidagi so‘nggi yangiliklar va o‘zgarishlardan xabardor bo‘ling.",
+  "watchVideo": "Videoni tomosha qilish",
+  "attractions": "Diqqatga sazovor joylar",
+  "population": "Aholi soni"
+},
+"countries": {
+  "uzbekistan": {
+    "title": "O‘zbekiston",
+    "description": "Markaziy Osiyoning qadimiy tarixi va boy madaniyatiga ega davlati."
+  },
+  "turkey": {
+    "title": "Turkiya",
+    "description": "Yevropa va Osiyoni bog‘lovchi tarixiy va madaniy mamlakat."
+  },
+  "kazakhstan": {
+    "title": "Qozog‘iston",
+    "description": "Markaziy Osiyodagi eng katta davlat."
+  },
+  "azerbaijan": {
+    "title": "Ozarbayjon",
+    "description": "Boy tarixi va madaniyatiga ega Kavkaz davlati."
+  },
+  "kyrgyzstan": {
+    "title": "Qirg‘iziston",
+    "description": "Go‘zal tog‘lari va ko‘llari bilan mashhur mamlakat."
+  },
+  "turkmenistan": {
+    "title": "Turkmaniston",
+    "description": "Qadimiy tarix va madaniyatga ega Markaziy Osiyo davlati."
+}
+},
+  "forms": {
+    "have_question": "Bizga biror savoling bormi?",
+    "fill_blanks":"Quyidagi formani to‘ldiring, biz tez orada siz bilan bog‘lanamiz",
+    "fullName":"ism",
+    "email":"elektron pochta",
+    "message":"xabar",
+    "approve_with":"Ushbu xabarni yuborish orqali siz maxfiylik siyosati shartlariga rozilik bildirasiz.",
+    "address":"Manzil",
+    "phone_number":"telefon raqam",
+            "send_for":"yuborish"
+
   }
 }
+
