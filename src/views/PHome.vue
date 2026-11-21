@@ -3,6 +3,7 @@
     <CBanner/>
     <CAbout/>
     <CCountries/>
+    <CNews/>
     <CInstagram />
 
 </div>

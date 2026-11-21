@@ -1,3 +1,4 @@
+
 import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
@@ -22,10 +23,15 @@ const routes = [
         component: () => import('@/views/PDinlar.vue')
       },
       {
-        path: 'umumiy-xarita',
-        name: 'umumiy-xarita',
-        component: () => import('@/views/PUmumiyxarita.vue')
+        path: 'dinlar/:slug',
+        name: 'religion-single',
+        component: () => import('@/views/religions/PSingle.vue')
       },
+      // {
+      //   path: 'umumiy-xarita',
+      //   name: 'umumiy-xarita',
+      //   component: () => import('@/views/PUmumiyxarita.vue')
+      // },
       {
         path: 'yordam',
         name: 'yordam',
@@ -42,46 +48,46 @@ const routes = [
         component: () => import('@/views/PPlayground.vue'),
         alias: ['spark', 'tracker']
       },
-      {
-        path: 'davlatlar',
-        name: 'davlatlar',
-        component: () => import('@/views/PDavlatlar.vue')
-      },
-      {
-        path: 'uzbekistan',
-        name: 'uzbekistan',
-        component: () => import('@/views/PDavlatlar.vue')
-      },
-      {
-        path: 'turkey',
-        name: 'turkey',
-        component: () => import('@/views/PDavlatlar.vue')
-      },
-      {
-        path: 'turkmenistan',
-        name: 'turkmenistan',
-        component: () => import('@/views/PDavlatlar.vue')
-      },
-      {
-        path: 'azerbaijan',
-        name: 'azerbaijan',
-        component: () => import('@/views/PDavlatlar.vue')
-      },
-      {
-        path: 'kazakhstan',
-        name: 'kazakhstan',
-        component: () => import('@/views/PDavlatlar.vue')
-      },
-      {
-        path: 'kyrgyzstan',
-        name: 'kyrgyzstan',
-        component: () => import('@/views/PDavlatlar.vue')
-      },
-      {
-        path: 'hungary',
-        name: 'hungary',
-        component: () => import('@/views/PDavlatlar.vue')
-      },
+      // {
+      //   path: 'davlatlar',
+      //   name: 'davlatlar',
+      //   component: () => import('@/views/PDavlatlar.vue')
+      // },
+      // {
+      //   path: 'uzbekistan',
+      //   name: 'uzbekistan',
+      //   component: () => import('@/views/PDavlatlar.vue')
+      // },
+      // {
+      //   path: 'turkey',
+      //   name: 'turkey',
+      //   component: () => import('@/views/PDavlatlar.vue')
+      // },
+      // {
+      //   path: 'turkmenistan',
+      //   name: 'turkmenistan',
+      //   component: () => import('@/views/PDavlatlar.vue')
+      // },
+      // {
+      //   path: 'azerbaijan',
+      //   name: 'azerbaijan',
+      //   component: () => import('@/views/PDavlatlar.vue')
+      // },
+      // {
+      //   path: 'kazakhstan',
+      //   name: 'kazakhstan',
+      //   component: () => import('@/views/PDavlatlar.vue')
+      // },
+      // {
+      //   path: 'kyrgyzstan',
+      //   name: 'kyrgyzstan',
+      //   component: () => import('@/views/PDavlatlar.vue')
+      // },
+      // {
+      //   path: 'hungary',
+      //   name: 'hungary',
+      //   component: () => import('@/views/PDavlatlar.vue')
+      // },
       {
         path: 'news/:id',
         name: 'news-single',
@@ -89,8 +95,8 @@ const routes = [
       },
       {
         path: 'country/:id',
-        name: "country-single",
-        component: ()=> import('@/views/countries/PIndex.vue')
+        name: 'country-single',
+        component: () => import('@/views/countries/PIndex.vue')
       }
     ]
   }
