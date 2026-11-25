@@ -1,22 +1,36 @@
+
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 import { religionsData } from '@/data/religionsData'
 import { countries } from '@/data/countryData.ts'
 import CCardCountrie from '@/components/card/CCountryCard.vue'
 
 const route = useRoute()
+const { t } = useI18n()
 
 const religion = computed(() => {
   return religionsData.find(
     item => item.slug === route.params.slug
   )
 })
+
+const religionTitle = computed(() => {
+  if (!religion.value) return ''
+
+  return t(`religions.${religion.value.slug}.title`)
+})
+
+const religionDescription = computed(() => {
+  if (!religion.value) return ''
+
+  return t(`religions.${religion.value.slug}.description`)
+})
 </script>
 
 <template>
   <template v-if="religion">
-    <!-- Hero -->
     <section
       class="relative min-h-screen w-full overflow-hidden bg-cover bg-center bg-no-repeat text-white"
       :style="{
@@ -34,7 +48,7 @@ const religion = computed(() => {
             class="flex items-center gap-2 transition hover:text-red-400"
           >
             <span>⌂</span>
-            <span>Asosai</span>
+            <span>{{ t('religions.home') }}</span>
           </RouterLink>
 
           <span class="text-white/40">/</span>
@@ -43,13 +57,13 @@ const religion = computed(() => {
             to="/dinlar"
             class="transition hover:text-red-400"
           >
-            Religions
+            {{ t('religions.title') }}
           </RouterLink>
 
           <span class="text-white/40">/</span>
 
           <span class="text-white">
-            {{ religion.title }}
+            {{ religionTitle }}
           </span>
         </div>
 
@@ -61,11 +75,11 @@ const religion = computed(() => {
             </div>
 
             <h1 class="text-5xl font-bold tracking-wide md:text-7xl">
-              {{ religion.title }}
+              {{ religionTitle }}
             </h1>
 
             <p class="mt-4 text-lg text-white/80">
-              {{ religion.title }}
+              {{ religionDescription }}
             </p>
           </div>
         </div>
@@ -78,33 +92,46 @@ const religion = computed(() => {
             <h2 class="mb-3 text-3xl font-semibold">
               {{ religion.addresses }}
             </h2>
-            <p class="text-white/70">Religious destinations</p>
+
+            <p class="text-white/70">
+              {{ t('religions.page.destinations') }}
+            </p>
           </div>
 
           <div
             class="rounded-2xl border border-white/10 bg-white/[0.08] p-6 backdrop-blur-md transition duration-300 hover:bg-white/[0.15]"
           >
             <h2 class="mb-3 text-3xl font-semibold">
-              {{ religion.title }}
+              {{ religionTitle }}
             </h2>
-            <p class="text-white/70">Explore religious places</p>
+
+            <p class="text-white/70">
+              {{ t('religions.page.explorePlaces') }}
+            </p>
           </div>
 
           <div
             class="rounded-2xl border border-white/10 bg-white/[0.08] p-6 backdrop-blur-md transition duration-300 hover:bg-white/[0.15]"
           >
-            <h2 class="mb-3 text-3xl font-semibold">Explore</h2>
-            <p class="text-white/70">Discover sacred destinations</p>
+            <h2 class="mb-3 text-3xl font-semibold">
+              {{ t('religions.page.explore') }}
+            </h2>
+
+            <p class="text-white/70">
+              {{ t('religions.page.discover') }}
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Davlatlar (same card + same style as your countries section) -->
+    <!-- Countries -->
     <section class="countries-section">
       <div class="countries-container">
         <div class="section-heading">
-          <h2 class="section-title">Davlatlar</h2>
+          <h2 class="section-title">
+            {{ t('religions.page.countries') }}
+          </h2>
         </div>
 
         <div class="countries-grid">
@@ -138,13 +165,15 @@ const religion = computed(() => {
     class="flex min-h-screen items-center justify-center bg-[#08091d] px-4 text-white"
   >
     <div class="text-center">
-      <h1 class="text-3xl font-semibold">Religion not found</h1>
+      <h1 class="text-3xl font-semibold">
+        {{ t('religions.page.notFound') }}
+      </h1>
 
       <RouterLink
         to="/dinlar"
         class="mt-5 inline-block text-white/70 transition hover:text-white"
       >
-        ← Back to religions
+        ← {{ t('religions.page.back') }}
       </RouterLink>
     </div>
   </section>

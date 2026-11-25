@@ -1,3 +1,4 @@
+
 {
   "header": {
     "about": "About us",
@@ -5,7 +6,8 @@
     "map": "General map",
     "religions": "Religions",
     "help": "Help",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "openSearch": "Open search"
   },
   "partners": {
     "title": "Partners",
@@ -19,49 +21,94 @@
     "empty": "No news available yet."
   },
   "gallery": {
-  "title": "Photos",
-  "subtitle": "Stay informed about the latest news and developments in the Turkic world.",
-  "watchVideo": "Watch video",
-  "attractions": "Places of interest",
-  "population": "Population"
-},
-"countries": {
-  "uzbekistan": {
-    "title": "Uzbekistan",
-    "description": "A Central Asian country with ancient history and rich culture."
+    "title": "Photos",
+    "subtitle": "Stay informed about the latest news and developments in the Turkic world.",
+    "watchVideo": "Watch video",
+    "attractions": "Places of interest",
+    "population": "Population"
   },
-  "turkey": {
-    "title": "Turkey",
-    "description": "A historical and cultural country connecting Europe and Asia."
+  "countries": {
+    "uzbekistan": {
+      "title": "Uzbekistan",
+      "description": "A Central Asian country with ancient history and rich culture."
+    },
+    "turkey": {
+      "title": "Turkey",
+      "description": "A historical and cultural country connecting Europe and Asia."
+    },
+    "kazakhstan": {
+      "title": "Kazakhstan",
+      "description": "The largest country in Central Asia."
+    },
+    "azerbaijan": {
+      "title": "Azerbaijan",
+      "description": "A Caucasian country with a rich history and culture."
+    },
+    "kyrgyzstan": {
+      "title": "Kyrgyzstan",
+      "description": "A country famous for its beautiful mountains and lakes."
+    },
+    "turkmenistan": {
+      "title": "Turkmenistan",
+      "description": "A Central Asian country with ancient history and culture."
+    }
   },
-  "kazakhstan": {
-    "title": "Kazakhstan",
-    "description": "The largest country in Central Asia."
+  "religions": {
+    "title": "Religions",
+    "addresses": "Addresses",
+    "home": "Home",
+    "islam": {
+      "title": "Islam",
+      "description": "Islam is one of the world's largest religions, based on belief in one God and values such as peace, mercy, justice, and humanity.",
+      "history": "Islam emerged in the 7th century in the Arabian Peninsula. Its teachings are based on the Quran and the Sunnah of Prophet Muhammad.",
+      "beliefs": "Main beliefs of Islam",
+      "beliefs_description": "Islam includes belief in one God, prophets, holy books, angels, the Day of Judgment, and divine decree.",
+      "places_title": "Holy places",
+      "places_description": "Mecca, Medina, and Jerusalem hold important significance in Islam.",
+      "culture_title": "Culture and traditions",
+      "culture_description": "Islamic culture has contributed to science, architecture, literature, art, hospitality, and respect for others."
+    },
+    "christianity": {
+      "title": "Christianity",
+      "description": "Christianity is one of the world's largest religions, based on the teachings of Jesus Christ.",
+      "history": "Christianity originated in the 1st century in the Roman Empire and later spread throughout many parts of the world.",
+      "beliefs": "Main beliefs of Christianity",
+      "beliefs_description": "Christianity's main teachings focus on faith in God, Jesus Christ, love, forgiveness, and helping others.",
+      "places_title": "Holy places",
+      "places_description": "Jerusalem, Bethlehem, and the Vatican are important places in Christian history.",
+      "culture_title": "Culture and traditions",
+      "culture_description": "Christian culture has made significant contributions to art, music, architecture, education, and literature."
+    },
+    "buddhism": {
+      "title": "Buddhism",
+      "description": "Buddhism is a religious and philosophical teaching focused on spiritual development, wisdom, peace, and compassion.",
+      "history": "Buddhism developed around the 6th–5th centuries BCE in India based on the teachings of Siddhartha Gautama.",
+      "beliefs": "Main teachings of Buddhism",
+      "beliefs_description": "Buddhism focuses on understanding life, suffering, its causes, and the path to liberation, as well as mindfulness and compassion.",
+      "places_title": "Important sacred places",
+      "places_description": "Lumbini, Bodh Gaya, Sarnath, and Kushinagar are important places in Buddhist history.",
+      "culture_title": "Culture and traditions",
+      "culture_description": "Buddhist culture is known for meditation, art, architecture, philosophy, and values of peace."
+    },
+    "page": {
+      "destinations": "Religious destinations",
+      "explorePlaces": "Explore religious places",
+      "explore": "Explore",
+      "discover": "Discover sacred destinations",
+      "countries": "Countries",
+      "notFound": "Religion not found",
+      "back": "Back to religions"
+    }
   },
-  "azerbaijan": {
-    "title": "Azerbaijan",
-    "description": "A Caucasian country with a rich history and culture."
-  },
-  "kyrgyzstan": {
-    "title": "Kyrgyzstan",
-    "description": "A country famous for its beautiful mountains and lakes."
-  },
-  "turkmenistan": {
-    "title": "Turkmenistan",
-    "description": "A Central Asian country with ancient history and culture."
-  }
-},
   "forms": {
-    "have_question":"Do you have a question for us?",
-    "fill_blanks":"Fill out the formx below and we’ll get in touch with you soon",
-    "fullName":"name",
-    "email":"Email",
-    "message":"Message",
-    "approve_with":"By sending this message, you agree to the terms of the privacy policy.",
-    "address":"Address",
+    "have_question": "Do you have a question for us?",
+    "fill_blanks": "Fill out the form below and we’ll get in touch with you soon",
+    "fullName": "Name",
+    "email": "Email",
+    "message": "Message",
+    "approve_with": "By sending this message, you agree to the terms of the privacy policy.",
+    "address": "Address",
     "phone_number": "Phone number",
-    "send_for":"send"
-     
-  } 
+    "send_for": "Send"
+  }
 }
-

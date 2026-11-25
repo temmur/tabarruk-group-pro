@@ -1,12 +1,15 @@
 
 <script setup lang="ts">
 import { religionsData } from '@/data/religionsData'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 </script>
 
 <template>
   <section class="container mx-auto px-4 py-12 text-white">
     <h1 class="mb-8 text-3xl font-semibold">
-      Dinlar
+      {{ t('religions.title') }}
     </h1>
 
     <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -22,11 +25,12 @@ import { religionsData } from '@/data/religionsData'
 
         <div>
           <h2 class="text-lg font-semibold">
-            {{ religion.title }}
+            {{ t(`religions.${religion.slug}.title`) }}
           </h2>
 
           <p class="mt-1 text-sm text-[#C2C2C5]">
-            {{ religion.addresses }} Addresses
+            {{ religion.addresses }}
+            {{ t('religions.addresses') }}
           </p>
         </div>
       </RouterLink>
