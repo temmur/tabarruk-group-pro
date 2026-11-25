@@ -5,7 +5,8 @@
     "map": "Umumiy xarita",
     "religions": "Dinlar",
     "help": "Yordam",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "openSearch": "Qidiruvni ochish"
   },
   "partners": {
     "title": "Hamkorlar",
@@ -19,49 +20,94 @@
     "empty": "Hozircha yangiliklar mavjud emas."
   },
   "gallery": {
-  "title": "Fotosuratlar",
-  "subtitle": "Turk dunyosidagi so‘nggi yangiliklar va o‘zgarishlardan xabardor bo‘ling.",
-  "watchVideo": "Videoni tomosha qilish",
-  "attractions": "Diqqatga sazovor joylar",
-  "population": "Aholi soni"
-},
-"countries": {
-  "uzbekistan": {
-    "title": "O‘zbekiston",
-    "description": "Markaziy Osiyoning qadimiy tarixi va boy madaniyatiga ega davlati."
+    "title": "Fotosuratlar",
+    "subtitle": "Turk dunyosidagi so‘nggi yangiliklar va o‘zgarishlardan xabardor bo‘ling.",
+    "watchVideo": "Videoni tomosha qilish",
+    "attractions": "Diqqatga sazovor joylar",
+    "population": "Aholi soni"
   },
-  "turkey": {
-    "title": "Turkiya",
-    "description": "Yevropa va Osiyoni bog‘lovchi tarixiy va madaniy mamlakat."
+  "countries": {
+    "uzbekistan": {
+      "title": "O‘zbekiston",
+      "description": "Markaziy Osiyoning qadimiy tarixi va boy madaniyatiga ega davlati."
+    },
+    "turkey": {
+      "title": "Turkiya",
+      "description": "Yevropa va Osiyoni bog‘lovchi tarixiy va madaniy mamlakat."
+    },
+    "kazakhstan": {
+      "title": "Qozog‘iston",
+      "description": "Markaziy Osiyodagi eng katta davlat."
+    },
+    "azerbaijan": {
+      "title": "Ozarbayjon",
+      "description": "Boy tarixi va madaniyatiga ega Kavkaz davlati."
+    },
+    "kyrgyzstan": {
+      "title": "Qirg‘iziston",
+      "description": "Go‘zal tog‘lari va ko‘llari bilan mashhur mamlakat."
+    },
+    "turkmenistan": {
+      "title": "Turkmaniston",
+      "description": "Qadimiy tarix va madaniyatga ega Markaziy Osiyo davlati."
+    }
   },
-  "kazakhstan": {
-    "title": "Qozog‘iston",
-    "description": "Markaziy Osiyodagi eng katta davlat."
+  "religions": {
+    "title": "Dinlar",
+    "addresses": "Manzillar",
+    "home": "Asosiy",
+    "islam": {
+      "title": "Islom",
+      "description": "Islom dunyodagi eng yirik dinlardan biri bo‘lib, yagona Allohga e'tiqod, tinchlik, rahm-shafqat, adolat va insoniylik qadriyatlariga asoslanadi.",
+      "history": "Islom dini VII asrda Arabiston yarimorolida vujudga kelgan. Uning ta'limoti Qur'on va Payg‘ambar Muhammadning sunnatlariga asoslanadi.",
+      "beliefs": "Islomning asosiy e'tiqodlari",
+      "beliefs_description": "Islom yagona Allohga, payg‘ambarlarga, muqaddas kitoblarga, farishtalarga, oxirat kuniga va taqdirga ishonishni o‘z ichiga oladi.",
+      "places_title": "Muqaddas joylar",
+      "places_description": "Makka, Madina va Quddus Islom dinida muhim muqaddas joylar hisoblanadi.",
+      "culture_title": "Madaniyat va an'analar",
+      "culture_description": "Islom madaniyati ilm-fan, me'morchilik, adabiyot, san'at, mehmondo‘stlik va o‘zaro hurmat rivojiga hissa qo‘shgan."
+    },
+    "christianity": {
+      "title": "Xristianlik",
+      "description": "Xristianlik Iso Masih ta'limotiga asoslangan dunyodagi yirik dinlardan biridir.",
+      "history": "Xristianlik I asrda Rim imperiyasi hududida vujudga kelgan va keyinchalik dunyoning ko‘plab mamlakatlariga tarqalgan.",
+      "beliefs": "Xristianlikning asosiy e'tiqodlari",
+      "beliefs_description": "Xristianlikning asosiy ta'limotlari Xudoga, Iso Masihga, mehr-muhabbatga, kechirimlilikka va insonlarga yordam berishga asoslanadi.",
+      "places_title": "Muqaddas joylar",
+      "places_description": "Quddus, Baytlahm va Vatikan xristianlik tarixida muhim o‘rin tutadigan joylardir.",
+      "culture_title": "Madaniyat va an'analar",
+      "culture_description": "Xristian madaniyati san'at, musiqa, me'morchilik, ta'lim va adabiyot rivojiga katta hissa qo‘shgan."
+    },
+    "buddhism": {
+      "title": "Buddizm",
+      "description": "Buddizm insonning ma'naviy rivojlanishi, donolik, xotirjamlik va rahm-shafqatga asoslangan diniy-falsafiy ta'limotdir.",
+      "history": "Buddizm taxminan miloddan avvalgi VI–V asrlarda Hindistonda Siddhartha Gautama ta'limoti asosida shakllangan.",
+      "beliefs": "Buddizmning asosiy ta'limotlari",
+      "beliefs_description": "Buddizm hayot, azob-uqubatlar, ularning sabablari va ulardan xalos bo‘lish yo‘llarini tushunishga, shuningdek, ongli hayot va mehr-shafqatga e'tibor qaratadi.",
+      "places_title": "Muhim muqaddas joylar",
+      "places_description": "Lumbini, Bodx-Gaya, Sarnath va Kushinagar buddizm tarixidagi muhim joylardir.",
+      "culture_title": "Madaniyat va an'analar",
+      "culture_description": "Buddizm madaniyati meditatsiya, san'at, me'morchilik, falsafa va tinchlik qadriyatlari bilan tanilgan."
+    },
+    "page": {
+      "destinations": "Diniy manzillar",
+      "explorePlaces": "Diniy joylarni o‘rganing",
+      "explore": "Sayohat",
+      "discover": "Muqaddas manzillarni kashf eting",
+      "countries": "Davlatlar",
+      "notFound": "Din topilmadi",
+      "back": "Dinlarga qaytish"
+    }
   },
-  "azerbaijan": {
-    "title": "Ozarbayjon",
-    "description": "Boy tarixi va madaniyatiga ega Kavkaz davlati."
-  },
-  "kyrgyzstan": {
-    "title": "Qirg‘iziston",
-    "description": "Go‘zal tog‘lari va ko‘llari bilan mashhur mamlakat."
-  },
-  "turkmenistan": {
-    "title": "Turkmaniston",
-    "description": "Qadimiy tarix va madaniyatga ega Markaziy Osiyo davlati."
-}
-},
   "forms": {
     "have_question": "Bizga biror savoling bormi?",
-    "fill_blanks":"Quyidagi formani to‘ldiring, biz tez orada siz bilan bog‘lanamiz",
-    "fullName":"ism",
-    "email":"elektron pochta",
-    "message":"xabar",
-    "approve_with":"Ushbu xabarni yuborish orqali siz maxfiylik siyosati shartlariga rozilik bildirasiz.",
-    "address":"Manzil",
-    "phone_number":"telefon raqam",
-            "send_for":"yuborish"
-
+    "fill_blanks": "Quyidagi formani to‘ldiring, biz tez orada siz bilan bog‘lanamiz",
+    "fullName": "Ism",
+    "email": "Elektron pochta",
+    "message": "Xabar",
+    "approve_with": "Ushbu xabarni yuborish orqali siz maxfiylik siyosati shartlariga rozilik bildirasiz.",
+    "address": "Manzil",
+    "phone_number": "Telefon raqam",
+    "send_for": "Yuborish"
   }
 }
-

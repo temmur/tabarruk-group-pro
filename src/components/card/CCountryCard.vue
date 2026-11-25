@@ -8,7 +8,7 @@
     <h3 class="country-title">{{ title }}</h3>
 
     <p class="country-destinations">
-      {{ destintaions }} Manzillar
+      {{ destintaions }} {{ $t('religions.addresses') }}
     </p>
   </RouterLink>
 </template>
